@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flat</title>
+    <link id="theme-stylesheet" rel="stylesheet" href="mobile.css" />
+</head>
+
+<body>
+    <div id="content-table">
+        <div class="spacer" id="first-container">
+            <div class="language-switcher">
+                <div class="current-language" id="current-language"><img src="images/sr.png"></div>
+                <div class="arrow">
+                    <span class="arrow-top"></span>
+                    <span class="arrow-bottom"></span>
+                </div>
+                <div class="dropdown-content">
+                    <a href="flat_en.html" onclick="switchLanguage('en')"><img src="images/en.svg"></a>
+                    <a href="flat_ru.html" onclick="switchLanguage('ru')"><img src="images/rus.svg"></a>
+                    <a href="flat_sr.html" onclick="switchLanguage('en')"><img src="images/sr.svg"></a>
+                </div>
+            </div>
+
+            <script>
+                function switchLanguage(lang) {
+                    const texts = document.querySelectorAll('.text-lang');
+                    texts.forEach(text => {
+                        if (text.id.includes(lang)) {
+                            text.style.display = 'block';
+                        } else {
+                            text.style.display = 'none';
+                        }
+                    });
+
+                    // Меняем текст в текущем языке
+                    document.getElementById('current-language').textContent = lang.toUpperCase();
+                }
+            </script>
+
+            <img src="images/flat1.png" class="flatimages">
+        </div>
+
+        <button class="back-to-top" id="back-to-top"></button>
+        <script src="script.js"></script>
+
+        <div class="background-main">
+            <div class="header" id='navbar'>
+                <a href="#Main">Ručak</a>
+                <a href="#Breakfast">Doručak</a>
+                <a href="#Desserts">Slatkiši</a>
+                <a href="#Drinks">Pića</a>
+            </div>
+
+
+            <div class="background-text">
+                <p class="text1" id="Main">Hladno</p>
+            </div>
+            <div class="grid-container">
+                <div class="cold-images">
+                    <img src="images/main/Smoked.png">
+                </div>
+                <div class="text2"><span>Svinjski pauflek sa tonato sosom</span>
+                    <span>650</span>
+                </div>
+
+                <div class="cold-images">
+                    <img src="images/main/Green.png">
+                </div>
+
+                <div class="text2"><span> Zelena salata sa citrusnim dresingom</span>
+                    <span>520</span>
+                </div>
+
+                <div class="cold-images">
+                    <img src="images/main/Gazpacho.png">
+                </div>
+                <div class="text2"><span>Gaspačo sa paradajzom, jagodom
+                        i krem sirom</span>
+                    <span> 690</span>
+                </div>
+                <div class="cold-images">
+                    <img src="images/main/Antipasto.png">
+                </div>
+                <div class="text2"><span><span class="text-edit">Antipasto (mocarela, dimljena pečenica, masline, sušeni
+                            paradajz)</span>
+                        <span>860</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="background-textt">
+            <p class="text1">Toplo</p>
+        </div>
+        <div class="main-images">
+            <div class="grid-container">
+                <img src="images/main/Stewed.png">
+                <div class="text3"><span>Sporo kuvani juneći obrazi sa pireom</span>
+                    <span>980</span>
+                </div>
+
+                <div class="grid-container">
+                    <img src="images/main/vongole.png">
+                    <div class="text3"><span>Taljatele sa vongolama i paradajzom</span>
+                        <span>950</span>
+                    </div>
+                </div>
+                <div class="grid-container">
+                    <img src="images/main/Gnocchi.png">
+                    <div class="text3"><span>Njoke sa slaninom i sušenim paradajzom</span>
+                        <span> 690</span>
+                    </div>
+                </div>
+                <div class="grid-container">
+                    <img src="images/main/parmesan.png">
+                    <div class="text3"><span> Taljatele sa slatkim paradajzom
+                            i parmezanom <span class="text-edit">(veg)</span></span>
+                        <span>860</span>
+                    </div>
+                </div>
+                <div class="grid-container">
+                    <img src="images/main/Cheese.png">
+                    <div class="text3"><span>Potaž sa sirom<span class="text-edit">(veg)</span></span>
+                        <span>750</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-br">
+        <div class="background-texttt">
+            <p class="text1" id="Breakfast">Doručak</p>
+        </div>
+        <div class="main-images">
+            <div class="grid-container">
+                <img src="images/breakfast/pepe.png">
+                <div class="text4"><span>Omlet sa cacio e pepe sosom
+                        i pastramijem</span>
+                    <span>760</span>
+                </div>
+            </div>
+            <div class="grid-container">
+                <img src="images/breakfast/Omelette.png">
+                <div class="text4"><span>Omlet sa parizerom і sušenim
+                        paradajzom</span>
+                    <span>680</span>
+                </div>
+                <div class="grid-container">
+                    <img src="images/breakfast/Grilled.png">
+                    <div class="text4"><span>Topli sendvič sa sirom, pastramijem
+                            i sušenim paradajzom</span>
+                        <span> 740</span>
+                    </div>
+                    <div class="grid-container">
+                        <img src="images/breakfast/French.png">
+                        <div class="text4"><span> Francuski tost sa krem sirom
+                                i džemom od šumskog voća</span></span>
+                            <span>720</span>
+                        </div>
+                    </div>
+                    <div class="grid-container">
+                        <img src="images/breakfast/eggs.png">
+                        <div class="text4"><span>Jaja na turski način uz topli sendvič sa sirom</span>
+                            <span>980</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="desserts-container">
+        <div class="background-texttt">
+            <p class="text1" id="Desserts">Slatkiši</p>
+        </div>
+        <div class="main-images">
+            <div class="grid-container">
+                <img src="images/desserts/shu.png">
+                <div class="text4"><span>Princes krofne <br>- sa kremom od sira <br>- sa čokoladnim kremom
+                        <br>- sa kremom od šumskog voća</span>
+                    <span>300</span>
+                </div>
+                <div class="grid-container">
+                    <img src="images/desserts/poppy.png">
+                    <div class="text4"><span>Makov tiramisu</span>
+                        <span>700</span>
+                    </div>
+
+                </div>
+                <div class="grid-container">
+                    <img src="images/desserts/blue.png">
+                    <div class="text4"><span>Kolač od borovnice</span>
+                        <span> 300</span>
+                    </div>
+                </div>
+                <div class="grid-container">
+                    <img src="images/desserts/lemon.png">
+                    <div class="text4"><span> Kolač od limuna sa kremom
+                            od limuna i ružičastim biberom</span>
+                        <span>350</span>
+                    </div>
+                </div>
+                <div class="grid-container">
+                    <img src="images/main/Antipasto.png">
+                    <div class="text4"><span>Banana kolač sa sladoledom</span>
+                        <span>350</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="drink-container">
+        <div class="background-text-drink">
+            <p class="text1" id="Drinks">Pića</p>
+        </div>
+        <div class="grid-container-drinks">
+            <div class="grid-column1">
+                <div class="text5">Kafa</div>
+                <div class="text6">Crna Kafa </div>
+                <div class="grid-column2">
+                    <div class="text7">Espreso / Amerikano </div>
+                    <div class="text7">Batch brew </div>
+                    <div class="text7">Hand brew </div>
+                </div>
+                <div class="text6">Hladna kafa </div>
+                <div class="grid-column2">
+                    <div class="text7">Ledeni late </div>
+                    <div class="text7">Espreso tonik </div>
+                    <div class="text7">Bambl kafa </div>
+                    <div class="text7">Cold brew </div>
+                </div>
+            </div>
+
+
+            <div class="grid-drink-number">
+                <div>280</div>
+                <div>260/360</div>
+                <div>360/450</div>
+
+                <div class="text00">280</div>
+                <div>360</div>
+                <div>380</div>
+                <div>420</div>
+                <div>300</div>
+            </div>
+
+
+            <div class="grid-column1">
+                <div class="text0">Coffee</div>
+                <div class="text6">Kafa sa mlekom</div>
+                <div class="grid-column2">
+                    <div class="text7">Flet vajt</div>
+                    <div class="text7">Kapućino </div>
+                    <div class="text7">Late </div>
+                    <div class="text7">Raf sa vanilom i kakao puterom </div>
+                    <div class="text7">Bulletproof <span class="text-edit">(veg)</span></div>
+                    <div class="text7">Ovseno / Sojino mleko</div>
+                </div>
+            </div>
+
+            <div class="grid-drink-number">
+                <div>330</div>
+                <div>330/360</div>
+                <div>360</div>
+                <div>420</div>
+                <div>450</div>
+                <div>+50</div>
+            </div>
+        </div>
+
+        <div class="grid-container-drinks">
+            <div class="grid-column1">
+                <div class="text5">Pića</div>
+                <div class="text6">Sa mlekom </div>
+                <div class="grid-column2">
+                    <div class="text7">Mača late </div>
+                    <div class="text7">Kakao </div>
+                    <div class="text7">Bean-to-bar topla </div>
+                    <div class="text7">– čokolada šot </div>
+                    <div class="text7">– šot sa mlekom </div>
+                    <div class="text7">Ovseno / Sojino mleko </div>
+                </div>
+                <div class="text6">Čaj</div>
+                <div class="grid-column2">
+                    <div class="text7">Min Hong (Kina) </div>
+                    <div class="text7">Lun Czin Nun Sjan (Kina) </div>
+                    <div class="text7">Heljdin čaj </div>
+                </div>
+            </div>
+
+            <div class="grid-drink-number">
+                <div>380</div>
+                <div>380</div>
+                <div class="number0">000</div>
+                <div>300</div>
+                <div>360</div>
+                <div>+50</div>
+
+                <div class="text00">280</div>
+                <div>400</div>
+                <div>400</div>
+                <div>400</div>
+            </div>
+
+            <div class="grid-column1">
+                <div class="text0">Coffee</div>
+                <div class="text6">Hladna pića </div>
+                <div class="grid-column2">
+                    <div class="text7">Malina-limunska trava limunada </div>
+                    <div class="text7">Marakuja-krastavac limunada </div>
+                    <div class="text7">Ledeni rooibos čaj sa jagodom </div>
+                    <div class="text7">Ledeni mača late </div>
+                    <div class="text7">Mača tonik sa lavandom</div>
+                    <div class="text7">Kombucha</div>
+                    <div class="text7">Club mate</div>
+                </div>
+            </div>
+
+            <div class="grid-drink-number">
+                <div>330</div>
+                <div>330</div>
+                <div>400</div>
+                <div>380</div>
+                <div>420</div>
+                <div>420</div>
+                <div>420</div>
+            </div>
+
+        </div>
+
+        <div class="grid-container-drinks">
+            <div class="grid-column1">
+                <div class="text5">Žestoka pića</div>
+                <div class="grid-column2">
+                    <div class="text7">Bulleit Bourbon </div>
+                    <div class="text7">Nikka Coffey Grain Whiskey </div>
+                    <div class="text7">Rum Minoki Mizunara Cask </div>
+                    <div class="text7">Courvoisier VSOP</div>
+                    <div class="text7">Calvados Chateau du Breiu </div>
+                </div>
+            </div>
+
+            <div class="grid-drink-number2">
+                <div>600</div>
+                <div>1000</div>
+                <div>1000</div>
+                <div>850</div>
+                <div>1000</div>
+            </div>
+
+
+            <div class="grid-column1">
+                <div class="text0">Coffee</div>
+                <div class="grid-column2">
+                    <div class="text7">Roku Gin</div>
+                    <div class="text7">Amaro Montenegro </div>
+                    <div class="text7">Tatratea Original </div>
+                    <div class="text7">Vodka Grey Goose </div>
+                </div>
+            </div>
+
+            <div class="grid-drink-number2">
+                <div>650</div>
+                <div>400</div>
+                <div>400</div>
+                <div>900</div>
+            </div>
+        </div>
+
+        <div class="grid-container-drinks">
+            <div class="grid-column1">
+                <div class="text5">Cocktails</div>
+                <div class="grid-column2">
+                    <div class="text7">Vetar Promena <br><span class="text8">infuziran džin, tonik</span> </div>
+                    <div class="text7">Leto u prestonici <br> <span class="text8">citrusni vermut, tonik, parfem od
+                            narandže</span></div>
+                    <div class="text7">Italijanski doručak <br> <span class="text8">liker od zove, penušavo vino, kisela
+                            voda</span></div>
+                </div>
+            </div>
+
+            <div class="grid-drink-number2">
+                <div>600</div>
+                <div class="number00">000</div>
+                <div>600</div>
+                <div class="number00">000</div>
+                <div>600</div>
+
+            </div>
+
+
+            <div class="grid-column1">
+                <div class="text0">Coffee</div>
+                <div class="grid-column2">
+                    <div class="text7">Kir Royale <br><span class="text8">liker od crne ribizle, penušavo vino</span>
+                    </div>
+                    <div class="text7">Negroni <br> <span class="text8">džin, crveni vermut, biter</span></div>
+                    <div class="text7">Godfather <br> <span class="text8">viski, liker od badema, parfem od
+                            narandže</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-drink-number2">
+                <div>600</div>
+                <div class="number00">000</div>
+                <div>600</div>
+                <div class="number00">000</div>
+                <div>600</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="basement-container">
+        <img src="images/mobile/basement-mobile.png" class="basement">
+        <div class="grid-container-basement">
+            <div class="grid-column-align-left">
+                <div class="text10"> Kontakti </div>
+                <div class="container-contacts">
+                    <a href="https://www.instagram.com/flat.beograd?igsh=bGN0cTN0YzVzZ2Uw"> <img
+                            src="images/basement/instagram.png">
+                    </a>
+                    <a href="https://www.instagram.com/flat.beograd?igsh=bGN0cTN0YzVzZ2Uw" class="text-link2">
+                        flat.beograd </a>
+                </div>
+                <div class="container-contacts">
+                    <a href="https://wolt.com/sr/srb/belgrade/restaurant/flat-community"> <img
+                            src="images/basement/wolt.png"> </a>
+                    <a href="https://wolt.com/sr/srb/belgrade/restaurant/flat-community" class="text-link2">
+                        Devilery
+                        10:30-21:00</a>
+                </div>
+            </div>
+            <div class="grid-column">
+                <div class="text10"> Kako doći tamo? </div>
+                <img src="images/basement/map.png" class="map">
+                <a href="https://maps.app.goo.gl/qTDo765w7FSS3uwm9" class="text-link"> Flat community </a>
+                <div class="lebl"> <img src="images/basement/lebl.svg" class="lebl"> </div>
+                <div class="text69">©Elena Teplova, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var header = document.getElementById('navbar');
+            var spacer = document.querySelector('.spacer');
+            var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
+
+            console.log('Page Y Offset:', window.pageYOffset);
+            console.log('Spacer Bottom:', spacerBottom);
+
+            if (window.pageYOffset > spacerBottom - 20) {
+                header.classList.add('fixed');
+            } else {
+                header.classList.remove('fixed');
+            }
+        });
+    </script>
+</body>
+
+</html>
