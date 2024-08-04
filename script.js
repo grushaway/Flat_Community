@@ -11,13 +11,6 @@ document.addEventListener("scroll", function () {
   }
 });
 
-document.getElementById("back-to-top").addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
-
 function loadContent() {
   const width = window.innerWidth;
   const themeStylesheet = document.getElementById("theme-stylesheet");
@@ -31,6 +24,13 @@ function loadContent() {
         content.innerHTML = data;
       });
   }
+
+  document.getElementById("back-to-top").addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 }
 
 window.addEventListener("resize", loadContent);
