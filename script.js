@@ -12,13 +12,24 @@ document.addEventListener("scroll", function () {
 });
 
 function loadContent() {
-  const width = window.innerWidth;
   const themeStylesheet = document.getElementById("theme-stylesheet");
   const content = document.getElementById("content-table");
+  const userAgent = navigator.userAgent.toLowerCase();
+  const isMobile =
+    /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(
+      userAgent
+    );
 
-  if (width <= 600) {
+  if (isMobile) {
     themeStylesheet.setAttribute("href", "mobile.css");
     fetch("mobile.html")
+      .then((response) => response.text())
+      .then((data) => {
+        content.innerHTML = data;
+      });
+  } else {
+    themeStylesheet.setAttribute("href", "stylemain.css");
+    fetch("index.html")
       .then((response) => response.text())
       .then((data) => {
         content.innerHTML = data;

@@ -30,7 +30,8 @@ body {
   position: absolute;
   display: flex;
   align-items: start;
-  margin-left: 1150px;
+  /* margin-left: 1150px; */
+  right: 100px;
   z-index: 10;
   gap: 10px;
   align-content: flex-start;
@@ -158,6 +159,8 @@ body {
 .spacer {
   background: url("images/back.png");
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
   margin: 0;
   padding: 0;
   width: 100%;
