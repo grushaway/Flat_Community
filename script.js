@@ -1,16 +1,3 @@
-document.addEventListener("scroll", function () {
-  const firstContainer = document.getElementById("first-container");
-  const backToTopButton = document.getElementById("back-to-top");
-
-  const firstContainerBottom = firstContainer.getBoundingClientRect().bottom;
-
-  if (firstContainerBottom < 0) {
-    backToTopButton.style.display = "block";
-  } else {
-    backToTopButton.style.display = "none";
-  }
-});
-
 function loadContent() {
   const themeStylesheet = document.getElementById("theme-stylesheet");
   const content = document.getElementById("content-table");
@@ -41,6 +28,19 @@ function loadContent() {
       top: 0,
       behavior: "smooth",
     });
+  });
+
+  document.addEventListener("scroll", function () {
+    const firstContainer = document.getElementById("first-container");
+    const backToTopButton = document.getElementById("back-to-top");
+
+    const firstContainerBottom = firstContainer.getBoundingClientRect().bottom;
+
+    if (firstContainerBottom < 0) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
   });
 }
 
