@@ -544,10 +544,10 @@ body {
   z-index: 10;
 }
 
-/* .container-contacts {pace-around;
-}  display: flex;
+.container-contacts {
+  display: flex;
   align-items: center;
-} */
+}
 
 /* Add media queries for responsive design */
 /* align-items: center; */
