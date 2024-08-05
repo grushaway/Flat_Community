@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <script src="script.js"></script>
     <div id="content-table">
         <div class="spacer" id="first-container">
             <div class="language-switcher">
@@ -24,9 +23,11 @@
                     <a href="flat_sr.html" onclick="switchLanguage('sr')"><img src="images/sr.svg"></a>
                 </div>
             </div>
+            <img src="images/flat1.png" class="flatimages">
         </div>
 
-        <button class="back-to-top" id="back-to-top"></button>
+        <button class="back-to-top" id="back-to-top"></button>  
+        <script src="script.js"></script>
 
         <div class="background-main">
             <div class="header" id='navbar'>
@@ -36,25 +37,9 @@
                 <a href="#Drinks">Drinks</a>
             </div>
 
-            <script>
-                window.addEventListener('scroll', function () {
-                    var header = document.getElementById('navbar');
-                    var spacer = document.querySelector('.spacer');
-                    var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
-
-                    if (window.pageYOffset > spacerBottom - 20) {
-                        header.classList.add('fixed');
-                    } else {
-                        header.classList.remove('fixed');
-                    }
-                });
-            </script>
-
-
             <div class="background-text">
                 <p class="text1" id="Main">Cold dishes</p>
             </div>
-
             <div class="cold-images">
                 <img src="images/main/Smoked.png">
                 <img src="images/main/Green.png">
