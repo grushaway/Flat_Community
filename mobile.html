@@ -240,7 +240,6 @@
                 <div>420</div>
                 <div>300</div>
             </div>
-
             <div class="grid-column1">
                 <div class="text0">Coffee</div>
                 <div class="text6">Coffee with milk </div>
@@ -432,24 +431,6 @@
         </div>
     </div>
 
-
-
-    <script>
-        window.addEventListener('scroll', function () {
-            var header = document.getElementById('navbar');
-            var spacer = document.querySelector('.spacer');
-            var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
-
-            console.log('Page Y Offset:', window.pageYOffset);
-            console.log('Spacer Bottom:', spacerBottom);
-
-            if (window.pageYOffset > spacerBottom - 20) {
-                header.classList.add('fixed');
-            } else {
-                header.classList.remove('fixed');
-            }
-        });
-    </script>
 </body>
 
 </html>
