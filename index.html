@@ -24,21 +24,7 @@
                 </div>
             </div>
 
-            <script>
-                function switchLanguage(lang) {
-                    const texts = document.querySelectorAll('.text-lang');
-                    texts.forEach(text => {
-                        if (text.id.includes(lang)) {
-                            text.style.display = 'block';
-                        } else {
-                            text.style.display = 'none';
-                        }
-                    });
-
-                    // Меняем текст в текущем языке
-                    document.getElementById('current-language').textContent = lang.toUpperCase();
-                }
-            </script>
+         
 
             <img src="images/flat1.png" class="flatimages">
         </div>
@@ -67,7 +53,7 @@
                     }
                 });
             </script>
-            
+
             <div class="background-text">
                 <p class="text1" id="Main">Cold dishes</p>
             </div>

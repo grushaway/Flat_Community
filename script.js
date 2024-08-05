@@ -42,7 +42,19 @@ function loadContent() {
       backToTopButton.style.display = "none";
     }
   });
+
+  function switchLanguage(lang) {
+    const texts = document.querySelectorAll(".text-lang");
+    texts.forEach((text) => {
+      if (text.id.includes(lang)) {
+        text.style.display = "block";
+      } else {
+        text.style.display = "none";
+      }
+    });
+  }
 }
 
 window.addEventListener("resize", loadContent);
 window.addEventListener("load", loadContent);
+document.getElementById("current-language").textContent = lang.toUpperCase();
