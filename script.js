@@ -53,6 +53,7 @@ function loadContent() {
       }
     });
   }
+
   document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
       var header = document.getElementById("navbar");
