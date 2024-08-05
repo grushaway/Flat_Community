@@ -21,7 +21,12 @@
   padding: 0;
 }
 
-body, .background-main, .container-br, .desserts-container, .drink-container, .basement-container {
+body,
+.background-main,
+.container-br,
+.desserts-container,
+.drink-container,
+.basement-container {
   margin: 0;
   width: 100%;
 }
@@ -378,7 +383,8 @@ body, .background-main, .container-br, .desserts-container, .drink-container, .b
   margin: auto;
 }
 
-.grid-column1, .grid-column2 {
+.grid-column1,
+.grid-column2 {
   display: grid;
   row-gap: 20px;
 }
@@ -392,7 +398,9 @@ body, .background-main, .container-br, .desserts-container, .drink-container, .b
   padding: 5px;
 }
 
-.text0, .text5, .text00 {
+.text0,
+.text5,
+.text00 {
   font-family: "edit";
   font-size: 24px;
   color: rgb(0, 0, 0);
@@ -407,7 +415,14 @@ body, .background-main, .container-br, .desserts-container, .drink-container, .b
   font-size: 20px;
 }
 
-.text7,.text8,.grid-drink-text,.text6,.text-link,.text-link2,.text69,.text-contact {
+.text7,
+.text8,
+.grid-drink-text,
+.text6,
+.text-link,
+.text-link2,
+.text69,
+.text-contact {
   color: rgb(211, 211, 211);
   font-family: "neuem";
   font-size: 16px;

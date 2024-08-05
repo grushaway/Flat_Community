@@ -23,29 +23,6 @@ function loadContent() {
       });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    var backToTopButton = document.getElementById("back-to-top");
-
-    window.addEventListener("scroll", function () {
-      const firstContainer = document.getElementById("first-container");
-      const firstContainerBottom =
-        firstContainer.getBoundingClientRect().bottom;
-
-      if (firstContainerBottom < 0) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
-      }
-    });
-
-    backToTopButton.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
-  });
-
   function switchLanguage(lang) {
     const texts = document.querySelectorAll(".text-lang");
     texts.forEach((text) => {
@@ -57,29 +34,42 @@ function loadContent() {
     });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener("scroll", function () {
-      var header = document.getElementById("navbar");
-      var spacer = document.querySelector(".spacer");
-
-      if (spacer) {
-        var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
-
-        console.log("Page Y Offset:", window.pageYOffset);
-        console.log("Spacer Bottom:", spacerBottom);
-
-        if (window.pageYOffset > spacerBottom - 20) {
-          header.classList.add("fixed");
-        } else {
-          header.classList.remove("fixed");
-        }
-      } else {
-        console.error("Element with class 'spacer' not found.");
-      }
-    });
-  });
-
   window.addEventListener("resize", loadContent);
   window.addEventListener("load", loadContent);
   document.getElementById("current-language").textContent = lang.toUpperCase();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var backToTopButton = document.getElementById("back-to-top");
+  var header = document.getElementById("header");
+
+  window.addEventListener("scroll", function () {
+    const firstContainer = document.getElementById("first-container");
+    const firstContainerBottom = firstContainer.getBoundingClientRect().bottom;
+
+    if (firstContainerBottom < 0) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
+
+  window.addEventListener("scroll", function () {
+    var header = document.getElementById("navbar");
+    var spacer = document.querySelector(".spacer");
+    var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
+
+    if (window.pageYOffset > spacerBottom - 20) {
+      header.classList.add("fixed");
+    } else {
+      header.classList.remove("fixed");
+    }
+  });
+
+  backToTopButton.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
