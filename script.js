@@ -23,24 +23,27 @@ function loadContent() {
       });
   }
 
-  document.getElementById("back-to-top").addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+  document.addEventListener("DOMContentLoaded", function () {
+    var backToTopButton = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", function () {
+      const firstContainer = document.getElementById("first-container");
+      const firstContainerBottom =
+        firstContainer.getBoundingClientRect().bottom;
+
+      if (firstContainerBottom < 0) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
     });
-  });
 
-  document.addEventListener("scroll", function () {
-    const firstContainer = document.getElementById("first-container");
-    const backToTopButton = document.getElementById("back-to-top");
-
-    const firstContainerBottom = firstContainer.getBoundingClientRect().bottom;
-
-    if (firstContainerBottom < 0) {
-      backToTopButton.style.display = "block";
-    } else {
-      backToTopButton.style.display = "none";
-    }
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
   });
 
   function switchLanguage(lang) {
