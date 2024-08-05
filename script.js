@@ -54,20 +54,20 @@ function loadContent() {
     });
   }
 
-        window.addEventListener('scroll', function () {
-            var header = document.getElementById('navbar');
-            var spacer = document.querySelector('.spacer');
-            var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
+  window.addEventListener("scroll", function () {
+    var header = document.getElementById("navbar");
+    var spacer = document.querySelector(".spacer");
+    var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
 
-            console.log('Page Y Offset:', window.pageYOffset);
-            console.log('Spacer Bottom:', spacerBottom);
+    console.log("Page Y Offset:", window.pageYOffset);
+    console.log("Spacer Bottom:", spacerBottom);
 
-            if (window.pageYOffset > spacerBottom - 20) {
-                header.classList.add('fixed');
-            } else {
-                header.classList.remove('fixed');
-            }
-        });
+    if (window.pageYOffset > spacerBottom - 20) {
+      header.classList.add("fixed");
+    } else {
+      header.classList.remove("fixed");
+    }
+  });
 }
 
 window.addEventListener("resize", loadContent);
