@@ -78,8 +78,8 @@ function loadContent() {
       }
     });
   });
-}
 
-window.addEventListener("resize", loadContent);
-window.addEventListener("load", loadContent);
-document.getElementById("current-language").textContent = lang.toUpperCase();
+  window.addEventListener("resize", loadContent);
+  window.addEventListener("load", loadContent);
+  document.getElementById("current-language").textContent = lang.toUpperCase();
+}

@@ -12,8 +12,6 @@
   src: url("fonts/editor.woff") format("woff");
   font-weight: normal;
   font-style: italic;
-  margin: 0;
-  padding: 0;
 }
 
 @font-face {
@@ -23,16 +21,21 @@
   padding: 0;
 }
 
-body {
+body,
+.background-main,
+.container-br,
+.desserts-container,
+.drink-container,
+.basement-container {
   margin: 0;
-  width: 1280px;
+  width: 100%;
 }
 
 .language-switcher {
   position: absolute;
   display: flex;
   align-items: start;
-  margin-left: 1150px;
+  right: 100px;
   z-index: 10;
   gap: 10px;
   align-content: flex-start;
@@ -48,6 +51,7 @@ body {
   height: auto;
   margin-top: 18px;
 }
+
 .current-language img {
   width: 25px;
   height: auto;
@@ -62,7 +66,6 @@ body {
   align-items: start;
   align-content: flex-start;
   margin-top: -30px;
-  /* border-radius: 10%; */
 }
 
 .arrow-top,
@@ -74,17 +77,21 @@ body {
   top: 62px;
   width: 11px;
 }
+
 .arrow-top {
   top: 62px;
 }
+
 .arrow-top {
   transform: rotate(45deg);
   transform-origin: bottom right;
 }
+
 .arrow-bottom {
   transform: rotate(-45deg);
   transform-origin: top right;
 }
+
 .arrow-top::after,
 .arrow-bottom::after {
   background: rgb(255, 255, 255);
@@ -94,20 +101,24 @@ body {
   top: 0;
   transition: all 0.11s;
 }
+
 .arrow-top::after {
   left: 100%;
   right: 0;
   transition-delay: 0.01s;
 }
+
 .arrow-bottom::after {
   left: 0;
   right: 100%;
   transition-delay: 0.15s;
 }
+
 .arrow:hover .arrow-top::after {
   left: 0;
   transition-delay: 0.15s;
 }
+
 .arrow:hover .arrow-bottom::after {
   right: 0;
   transition-delay: 0s;
@@ -139,8 +150,6 @@ body {
 
 .flatimages {
   max-width: 490px;
-  /* margin-top: 6.4%; */
-  /* margin-left: 32.5%; */
   height: auto;
   justify-content: center;
   position: absolute;
@@ -151,30 +160,32 @@ body {
 
 .spacer {
   background: url("images/back.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: black;
   margin: 0;
   padding: 0;
-  width: 1280px;
+  width: 100%;
   height: 817px;
 }
 
 .background-main {
   background-color: black;
   height: 450px;
-  width: 1280px;
 }
 
 .back-to-top {
-  display: none; /* Скрыть кнопку по умолчанию */
+  display: none;
   position: fixed;
   bottom: 30px;
   right: 30px;
   width: 40px;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 1000; /* Обеспечить, что кнопка будет поверх всех элементов */
+  z-index: 1000;
   transition: opacity 0.3s;
 }
 
@@ -190,14 +201,14 @@ body {
 }
 
 .back-to-top:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Меняем фон при наведении */
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .header {
-  top: 20px;
+  top: 50px;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: hsla(0, 0%, 0%, 0.86);
   color: white;
   display: flex;
@@ -205,19 +216,19 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  transition: all 0.6s;
+  transition: all 0.7s;
 }
 
 .header.fixed {
   position: fixed;
   top: 0;
-  height: 50px;
+  height: 70px;
 }
 
 .header a {
-  font-family: "neue-m"; /* Замените на ваш шрифт */
-  font-size: 18px; /* Размер шрифта */
-  color: rgb(211, 211, 211); /* Цвет текста */
+  font-family: "neue-m";
+  font-size: 18px;
+  color: rgb(211, 211, 211);
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -265,7 +276,6 @@ body {
 .main-container {
   background-color: rgb(0, 0, 0);
   height: 500px;
-  width: 1280px;
 }
 
 .background-textt {
@@ -317,7 +327,6 @@ body {
 .container-br {
   background-color: white;
   height: 450px;
-  width: 1280px;
 }
 
 .background-texttt {
@@ -347,13 +356,11 @@ body {
 .desserts-container {
   background-color: rgb(255, 255, 255);
   height: 500px;
-  width: 1280px;
 }
 
 .drink-container {
   background-color: black;
   height: 1400px;
-  width: 1280px;
 }
 
 .background-text-drink {
@@ -376,54 +383,56 @@ body {
   margin: auto;
 }
 
-.grid-column1 {
+.grid-column1,
+.grid-column2 {
   display: grid;
   row-gap: 20px;
 }
 
 .grid-column2 {
-  display: grid;
   row-gap: 10px;
 }
 
 .text00 {
   color: black;
-  font-size: 24px;
   padding: 5px;
 }
 
-.text0 {
+.text0,
+.text5,
+.text00 {
   font-family: "edit";
   font-size: 24px;
   color: rgb(0, 0, 0);
 }
 
 .text5 {
-  font-family: "edit";
-  font-size: 24px;
   color: rgba(220, 62, 22, 1);
 }
 
 .text6 {
-  color: rgb(211, 211, 211);
   font-family: "neue-m";
   font-size: 20px;
 }
 
-.text7 {
+.text7,
+.text8,
+.grid-drink-text,
+.text6,
+.text-link,
+.text-link2,
+.text-contact,
+.text69 {
   color: rgb(211, 211, 211);
   font-family: "neue-m";
   font-size: 16px;
 }
 
 .text8 {
-  color: rgb(211, 211, 211);
-  font-family: "neue-m";
   font-size: 12px;
 }
 
 .grid-drink-text {
-  color: white;
   text-align: left;
   font-family: "neue-m";
 }
@@ -461,16 +470,16 @@ body {
 }
 
 .grid-drink:nth-child(3) {
-  grid-column: 3 / 4; /* Псевдо-колонка */
+  grid-column: 3 / 4;
 }
 
 .grid-drink:nth-child(4) {
-  grid-column: 4 / 5; /* Третья колонка */
+  grid-column: 4 / 5;
 }
 
 .grid-container-drinks .pseudo-gap {
-  grid-column: 3 / 4; /* Псевдо-колонка */
-  background: transparent; /* Прозрачный фон */
+  grid-column: 3 / 4;
+  background: transparent;
   margin: 0 40px;
 }
 
@@ -483,7 +492,6 @@ body {
   background-color: black;
   position: relative;
   height: 550px;
-  width: 1280px;
   text-align: center;
 }
 
@@ -497,7 +505,6 @@ body {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* padding: 40px; */
   z-index: 10;
   margin: 180px auto 0;
 }
@@ -520,14 +527,12 @@ body {
   display: grid;
   justify-content: center;
   row-gap: 20px;
-  /* align-items: center; */
 }
 
 .grid-column-align-left {
   display: grid;
   justify-content: left;
   row-gap: 20px;
-  /* align-items: center; */
 }
 
 .text10 {
@@ -544,23 +549,57 @@ body {
   z-index: 10;
 }
 
-.lebl {
-  justify-content: space-around;
-}
-
 .container-contacts {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 1200px) {
+  .language-switcher {
+    margin-left: 950px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .language-switcher {
+    margin-left: 750px;
+  }
+}
 
 .container-contacts img {
+  @media screen and (max-width: 768px) {
+    .language-switcher {
+      margin-left: 550px;
+    }
+  }
+
   margin-right: 10px;
+  @media screen and (max-width: 576px) {
+    .language-switcher {
+      margin-left: 350px;
+    }
+  }
+
   width: 20px;
+  @media screen and (max-width: 480px) {
+    .language-switcher {
+      margin-left: 250px;
+    }
+  }
+
   height: auto;
+  @media screen and (max-width: 375px) {
+    .language-switcher {
+      margin-left: 200px;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .language-switcher {
+    margin-left: 150px;
+  }
 }
 
 .text-link {
-  color: rgb(211, 211, 211);
   font-family: "edit";
   position: relative;
   left: 50%;
@@ -577,7 +616,6 @@ body {
 }
 
 .text-link2 {
-  color: rgb(211, 211, 211);
   font-family: "neuem";
   z-index: 1;
   text-decoration: none;
@@ -588,7 +626,6 @@ body {
 }
 
 .text-contact {
-  color: rgb(211, 211, 211);
   font-family: "edit";
   font-size: 18px;
   position: absolute;
@@ -597,7 +634,6 @@ body {
 }
 
 .text69 {
-  color: rgb(211, 211, 211);
   font-family: "neuem";
   z-index: 1;
   font-size: 10px;
