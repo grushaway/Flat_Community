@@ -5,447 +5,448 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flat</title>
-    <link rel="stylesheet" href="stylemain_rus.css" />
+    <link id="theme-stylesheet" rel="stylesheet" href="stylemain_rus.css" />
 </head>
 
 <body>
-    <div class="spacer" id="first-container">
-        <div class="language-switcher">
-            <div class="current-language" id="current-language"><img src="images/rus.svg"></div>
-            <div class="arrow">
-                <span class="arrow-top"></span>
-                <span class="arrow-bottom"></span>
+    <div id="content-table">
+        <div class="spacer" id="first-container">
+            <div class="language-switcher">
+                <div class="current-language" id="current-language"><img src="images/rus.svg"></div>
+                <div class="arrow">
+                    <span class="arrow-top"></span>
+                    <span class="arrow-bottom"></span>
+                </div>
+                <div class="dropdown-content">
+                    <a href="index.html" onclick="switchLanguage('en')"><img src="images/en.svg"></a>
+                    <a href="flat_ru.html" onclick="switchLanguage('ru')"><img src="images/rus.svg"></a>
+                    <a href="flat_sr.html" onclick="switchLanguage('en')"><img src="images/sr.svg"></a>
+                </div>
             </div>
-            <div class="dropdown-content">
-                <a href="index.html" onclick="switchLanguage('en')"><img src="images/en.svg"></a>
-                <a href="flat_ru.html" onclick="switchLanguage('ru')"><img src="images/rus.svg"></a>
-                <a href="flat_sr.html" onclick="switchLanguage('en')"><img src="images/sr.svg"></a>
-            </div>
+
+            <script>
+                function switchLanguage(lang) {
+                    const texts = document.querySelectorAll('.text-lang');
+                    texts.forEach(text => {
+                        if (text.id.includes(lang)) {
+                            text.style.display = 'block';
+                        } else {
+                            text.style.display = 'none';
+                        }
+                    });
+
+                    // Меняем текст в текущем языке
+                    document.getElementById('current-language').textContent = lang.toUpperCase();
+                }
+            </script>
+
+            <img src="images/flat1.png" class="flatimages">
         </div>
 
-        <script>
-            function switchLanguage(lang) {
-                const texts = document.querySelectorAll('.text-lang');
-                texts.forEach(text => {
-                    if (text.id.includes(lang)) {
-                        text.style.display = 'block';
+        <button class="back-to-top" id="back-to-top"></button>
+        <script src="script.js"></script>
+
+        <div class="background-main">
+            <div class="header" id='navbar'>
+                <a href="#Main">Main</a>
+                <a href="#Breakfast">Breakfast</a>
+                <a href="#Desserts">Desserts</a>
+                <a href="#Drinks">Drinks</a>
+            </div>
+
+            <script>
+                window.addEventListener('scroll', function () {
+                    var header = document.getElementById('navbar');
+                    var spacer = document.querySelector('.spacer');
+                    var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
+
+                    if (window.pageYOffset > spacerBottom - 20) {
+                        header.classList.add('fixed');
                     } else {
-                        text.style.display = 'none';
+                        header.classList.remove('fixed');
                     }
                 });
-
-                // Меняем текст в текущем языке
-                document.getElementById('current-language').textContent = lang.toUpperCase();
-            }
-        </script>
-
-        <img src="images/flat1.png" class="flatimages">
-    </div>
-
-    <button class="back-to-top" id="back-to-top"></button>
-    <script src="script.js"></script>
-
-    <div class="background-main">
-        <div class="header" id='navbar'>
-            <a href="#Main">Main</a>
-            <a href="#Breakfast">Breakfast</a>
-            <a href="#Desserts">Desserts</a>
-            <a href="#Drinks">Drinks</a>
-        </div>
-
-        <script>
-            window.addEventListener('scroll', function () {
-                var header = document.getElementById('navbar');
-                var spacer = document.querySelector('.spacer');
-                var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
-
-                if (window.pageYOffset > spacerBottom - 20) {
-                    header.classList.add('fixed');
-                } else {
-                    header.classList.remove('fixed');
-                }
-            });
-        </script>
+            </script>
 
 
-        <div class="background-text">
-            <p class="text1" id="Main">Cold dishes</p>
-        </div>
-
-        <div class="cold-images">
-            <img src="images/main/Smoked.png">
-            <img src="images/main/Green.png">
-            <img src="images/main/Gazpacho.png">
-            <img src="images/main/Antipasto.png">
-        </div>
-        <div class="grid-container">
-            <div class="text2"><span>Копчёная грудинка c соусом
-                    тоннато</span>
-                <span>650</span>
-            </div>
-            <div class="text2"><span>Зелёный салат c цитрусовым
-                    дрессингом</span>
-                <span>520</span>
-            </div>
-            <div class="text2"><span>Гаспачо c томатами, клубникой
-                    и крем-чизом</span>
-                <span> 690</span>
-            </div>
-            <div class="text2"><span>Антипасти (моцарелла, копчёная
-                    свиная шея, оливки, вяленые томаты)</span>
-                <span>860</span>
-            </div>
-        </div>
-    </div>
-    <div class="main-container">
-        <div class="background-textt">
-            <p class="text1">Main</p>
-        </div>
-        <div class="main-images">
-            <img src="images/main/Stewed.png">
-            <img src="images/main/vongole.png">
-            <img src="images/main/Gnocchi.png">
-            <img src="images/main/parmesan.png">
-            <img src="images/main/Cheese.png">
-        </div>
-        <div class="grid-container2">
-            <div class="text3"><span>Томлёные говяжьи щёки c пюре</span>
-                <span>980</span>
+            <div class="background-text">
+                <p class="text1" id="Main">Cold dishes</p>
             </div>
 
-            <div class="text3"><span>Тальятелле c вонголе и сладкими томатами </span>
-                <span>950</span>
+            <div class="cold-images">
+                <img src="images/main/Smoked.png">
+                <img src="images/main/Green.png">
+                <img src="images/main/Gazpacho.png">
+                <img src="images/main/Antipasto.png">
             </div>
-
-            <div class="text3"><span>Ньокки c беконом и вялеными томатами</span>
-                <span> 690</span>
-            </div>
-            <div class="text3"><span>Тальятелле со сладкими томатами и пармезаном <span class="text-edit"></span>
-                    (veg)</span></span>
-                <span>860</span>
-            </div>
-            <div class="text3"><span>Сырный суп <span class="text-edit">(veg)</span></span>
-                <span>750</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-br">
-        <div class="background-texttt">
-            <p class="text1" id="Breakfast">Breakfast</p>
-        </div>
-        <div class="main-images">
-            <img src="images/breakfast/pepe.png">
-            <img src="images/breakfast/Omelette.png">
-            <img src="images/breakfast/Grilled.png">
-            <img src="images/breakfast/French.png">
-            <img src="images/breakfast/eggs.png">
-        </div>
-
-        <div class="grid-container2">
-            <div class="text4"><span>Омлет с соусом <br>качо-э-пепе и пастрами</span>
-                <span>760</span>
-            </div>
-
-            <div class="text4"><span>Омлет с болонской колбасой
-                    и вялеными томатами</span>
-                <span>680</span>
-            </div>
-
-            <div class="text4"><span>Сендвич гриль чиз с пастрами
-                    и вялеными томатами</span>
-                <span> 740</span>
-            </div>
-            <div class="text4"><span> Френч тост с творожным кремом
-                    и ягодным кули</span>
-                <span>720</span>
-            </div>
-            <div class="text4"><span>Яйца по-турецки с сырным
-                    тостом</span>
-                <span>980</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="desserts-container">
-        <div class="background-texttt">
-            <p class="text1" id="Desserts">Desserts</p>
-        </div>
-        <div class="main-images">
-            <img src="images/desserts/shu.png">
-            <img src="images/desserts/poppy.png">
-            <img src="images/desserts/blue.png">
-            <img src="images/desserts/lemon.png">
-            <img src="images/main/Antipasto.png">
-        </div>
-
-        <div class="grid-container2">
-            <div class="text4"><span>Пирожное Шу <br>- с творожным кремом <br>- с шоколадным кремом
-                    <br>- с ягодным кремом</span>
-                <span>300</span>
-            </div>
-
-            <div class="text4"><span>Маковый тирамису</span>
-                <span>700</span>
-            </div>
-
-            <div class="text4"><span>Голубичный кекс</span>
-                <span> 300</span>
-            </div>
-            <div class="text4"><span> Лимонный кекс с лимонным кремом и розовым перцем</span>
-                <span>350</span>
-            </div>
-            <div class="text4"><span>Банановый кекс с ванильным мороженым</span>
-                <span>350</span>
-            </div>
-        </div>
-
-    </div>
-
-
-    <div class="drink-container">
-        <div class="background-text-drink">
-            <p class="text1" id="Drinks">Drinks</p>
-        </div>
-        <div class="grid-container-drinks">
-            <div class="grid-column1">
-                <div class="text5">Coffee</div>
-                <div class="text6">Чёрный кофе </div>
-                <div class="grid-column2">
-                    <div class="text7">Эспрессо / Американо </div>
-                    <div class="text7">Батч брю </div>
-                    <div class="text7">Хэнд брю </div>
+            <div class="grid-container">
+                <div class="text2"><span>Копчёная грудинка c соусом
+                        тоннато</span>
+                    <span>650</span>
                 </div>
-                <div class="text6">Холодный кофе</div>
-                <div class="grid-column2">
-                    <div class="text7">Холодный латте </div>
-                    <div class="text7">Эспрессо тоник </div>
-                    <div class="text7">Бамбл </div>
-                    <div class="text7">Колдбрю </div>
+                <div class="text2"><span>Зелёный салат c цитрусовым
+                        дрессингом</span>
+                    <span>520</span>
+                </div>
+                <div class="text2"><span>Гаспачо c томатами, клубникой
+                        и крем-чизом</span>
+                    <span> 690</span>
+                </div>
+                <div class="text2"><span>Антипасти (моцарелла, копчёная
+                        свиная шея, оливки, вяленые томаты)</span>
+                    <span>860</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="background-textt">
+                <p class="text1">Main</p>
+            </div>
+            <div class="main-images">
+                <img src="images/main/Stewed.png">
+                <img src="images/main/vongole.png">
+                <img src="images/main/Gnocchi.png">
+                <img src="images/main/parmesan.png">
+                <img src="images/main/Cheese.png">
+            </div>
+            <div class="grid-container2">
+                <div class="text3"><span>Томлёные говяжьи щёки c пюре</span>
+                    <span>980</span>
                 </div>
 
+                <div class="text3"><span>Тальятелле c вонголе и сладкими томатами </span>
+                    <span>950</span>
+                </div>
+
+                <div class="text3"><span>Ньокки c беконом и вялеными томатами</span>
+                    <span> 690</span>
+                </div>
+                <div class="text3"><span>Тальятелле со сладкими томатами и пармезаном <span class="text-edit"></span>
+                        (veg)</span></span>
+                    <span>860</span>
+                </div>
+                <div class="text3"><span>Сырный суп <span class="text-edit">(veg)</span></span>
+                    <span>750</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-br">
+            <div class="background-texttt">
+                <p class="text1" id="Breakfast">Breakfast</p>
+            </div>
+            <div class="main-images">
+                <img src="images/breakfast/pepe.png">
+                <img src="images/breakfast/Omelette.png">
+                <img src="images/breakfast/Grilled.png">
+                <img src="images/breakfast/French.png">
+                <img src="images/breakfast/eggs.png">
             </div>
 
+            <div class="grid-container2">
+                <div class="text4"><span>Омлет с соусом <br>качо-э-пепе и пастрами</span>
+                    <span>760</span>
+                </div>
 
-            <div class="grid-drink-number">
-                <div>280</div>
-                <div>260/360</div>
-                <div>360/450</div>
+                <div class="text4"><span>Омлет с болонской колбасой
+                        и вялеными томатами</span>
+                    <span>680</span>
+                </div>
 
-                <div class="text00">280</div>
-                <div>360</div>
-                <div>380</div>
-                <div>420</div>
-                <div>300</div>
+                <div class="text4"><span>Сендвич гриль чиз с пастрами
+                        и вялеными томатами</span>
+                    <span> 740</span>
+                </div>
+                <div class="text4"><span> Френч тост с творожным кремом
+                        и ягодным кули</span>
+                    <span>720</span>
+                </div>
+                <div class="text4"><span>Яйца по-турецки с сырным
+                        тостом</span>
+                    <span>980</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="desserts-container">
+            <div class="background-texttt">
+                <p class="text1" id="Desserts">Desserts</p>
+            </div>
+            <div class="main-images">
+                <img src="images/desserts/shu.png">
+                <img src="images/desserts/poppy.png">
+                <img src="images/desserts/blue.png">
+                <img src="images/desserts/lemon.png">
+                <img src="images/main/Antipasto.png">
             </div>
 
-            <div class="grid-drink pseudo-gap"></div>
+            <div class="grid-container2">
+                <div class="text4"><span>Пирожное Шу <br>- с творожным кремом <br>- с шоколадным кремом
+                        <br>- с ягодным кремом</span>
+                    <span>300</span>
+                </div>
 
-
-            <div class="grid-column1">
-                <div class="text0">Coffee</div>
-                <div class="text6">Кофе с молоком </div>
-                <div class="grid-column2">
-                    <div class="text7">Флэт уайт </div>
-                    <div class="text7">Капучино </div>
-                    <div class="text7">Латте </div>
-                    <div class="text7">Раф с какао-маслом и ванилью </div>
-                    <div class="text7">Буллетпруф <span class="text-edit">(veg)</span></div>
-                    <div class="text7">Альтернативное молоко</div>
+                <div class="text4"><span>Маковый тирамису</span>
+                    <span>700</span>
+                </div>
+                <div class="text4"><span>Голубичный кекс</span>
+                    <span> 300</span>
+                </div>
+                <div class="text4"><span> Лимонный кекс с лимонным кремом и розовым перцем</span>
+                    <span>350</span>
+                </div>
+                <div class="text4"><span>Банановый кекс с ванильным мороженым</span>
+                    <span>350</span>
                 </div>
             </div>
 
-            <div class="grid-drink-number">
-                <div>330</div>
-                <div>330/360</div>
-                <div>360</div>
-                <div>420</div>
-                <div>450</div>
-                <div>+50</div>
+        </div>
+
+
+        <div class="drink-container">
+            <div class="background-text-drink">
+                <p class="text1" id="Drinks">Drinks</p>
+            </div>
+            <div class="grid-container-drinks">
+                <div class="grid-column1">
+                    <div class="text5">Coffee</div>
+                    <div class="text6">Чёрный кофе </div>
+                    <div class="grid-column2">
+                        <div class="text7">Эспрессо / Американо </div>
+                        <div class="text7">Батч брю </div>
+                        <div class="text7">Хэнд брю </div>
+                    </div>
+                    <div class="text6">Холодный кофе</div>
+                    <div class="grid-column2">
+                        <div class="text7">Холодный латте </div>
+                        <div class="text7">Эспрессо тоник </div>
+                        <div class="text7">Бамбл </div>
+                        <div class="text7">Колдбрю </div>
+                    </div>
+
+                </div>
+
+
+                <div class="grid-drink-number">
+                    <div>280</div>
+                    <div>260/360</div>
+                    <div>360/450</div>
+
+                    <div class="text00">280</div>
+                    <div>360</div>
+                    <div>380</div>
+                    <div>420</div>
+                    <div>300</div>
+                </div>
+
+                <div class="grid-drink pseudo-gap"></div>
+
+
+                <div class="grid-column1">
+                    <div class="text0">Coffee</div>
+                    <div class="text6">Кофе с молоком </div>
+                    <div class="grid-column2">
+                        <div class="text7">Флэт уайт </div>
+                        <div class="text7">Капучино </div>
+                        <div class="text7">Латте </div>
+                        <div class="text7">Раф с какао-маслом и ванилью </div>
+                        <div class="text7">Буллетпруф <span class="text-edit">(veg)</span></div>
+                        <div class="text7">Альтернативное молоко</div>
+                    </div>
+                </div>
+
+                <div class="grid-drink-number">
+                    <div>330</div>
+                    <div>330/360</div>
+                    <div>360</div>
+                    <div>420</div>
+                    <div>450</div>
+                    <div>+50</div>
+                </div>
+            </div>
+
+            <div class="grid-container-drinks">
+                <div class="grid-column1">
+                    <div class="text5">Drinks</div>
+                    <div class="text6">Напитки с молоком </div>
+                    <div class="grid-column2">
+                        <div class="text7">Матча латте </div>
+                        <div class="text7">Какао </div>
+                        <div class="text7">Бин-ту-бар </div>
+                        <div class="text7">- шоколад шот </div>
+                        <div class="text7">- шот с молоком </div>
+                        <div class="text7">Альтернативное молоко </div>
+                    </div>
+                    <div class="text6">Чай</div>
+                    <div class="grid-column2">
+                        <div class="text7">Мин Хун (Китай) </div>
+                        <div class="text7">Лунцзинь Нун Сьянь (Китай) </div>
+                        <div class="text7">Гречишный чай </div>
+                    </div>
+                </div>
+
+                <div class="grid-drink-number">
+                    <div>380</div>
+                    <div>380</div>
+                    <div class="number0">000</div>
+                    <div>300</div>
+                    <div>360</div>
+                    <div>+50</div>
+
+                    <div class="text00">280</div>
+                    <div>400</div>
+                    <div>400</div>
+                    <div>400</div>
+                </div>
+
+                <div class="grid-drink pseudo-gap"></div>
+
+
+                <div class="grid-column1">
+                    <div class="text0">Coffee</div>
+                    <div class="text6">Холодные напитки </div>
+                    <div class="grid-column2">
+                        <div class="text7">Лимонад малина-лемонграсс </div>
+                        <div class="text7">Лимонад маракуйя-огурец </div>
+                        <div class="text7">Холодный ройбуш </div>
+                        <div class="text7">Холодный матча латте</div>
+                        <div class="text7">Матча тоник с лавандой</div>
+                        <div class="text7">Комбуча</div>
+                        <div class="text7">Клаб мате</div>
+                    </div>
+                </div>
+
+                <div class="grid-drink-number">
+                    <div>330</div>
+                    <div>330</div>
+                    <div>400</div>
+                    <div>380</div>
+                    <div>420</div>
+                    <div>420</div>
+                    <div>420</div>
+                </div>
+
+            </div>
+
+            <div class="grid-container-drinks">
+                <div class="grid-column1">
+                    <div class="text5">Spirits</div>
+                    <div class="grid-column2">
+                        <div class="text7">Bulleit Bourbon </div>
+                        <div class="text7">Nikka Coffey Grain Whiskey </div>
+                        <div class="text7">Rum Minoki Mizunara Cask </div>
+                        <div class="text7">Courvoisier VSOP</div>
+                        <div class="text7">Calvados Chateau du Breiu </div>
+                    </div>
+                </div>
+
+                <div class="grid-drink-number2">
+                    <div>600</div>
+                    <div>1000</div>
+                    <div>1000</div>
+                    <div>850</div>
+                    <div>1000</div>
+                </div>
+
+                <div class="grid-drink pseudo-gap"></div>
+
+
+                <div class="grid-column1">
+                    <div class="text0">Coffee</div>
+                    <div class="grid-column2">
+                        <div class="text7">Roku Gin</div>
+                        <div class="text7">Amaro Montenegro </div>
+                        <div class="text7">Tatratea Original </div>
+                        <div class="text7">Vodka Grey Goose </div>
+                    </div>
+                </div>
+
+                <div class="grid-drink-number2">
+                    <div>650</div>
+                    <div>400</div>
+                    <div>400</div>
+                    <div>900</div>
+                </div>
+            </div>
+
+            <div class="grid-container-drinks">
+                <div class="grid-column1">
+                    <div class="text5">Cocktails</div>
+                    <div class="grid-column2">
+                        <div class="text7">Ветер перемен <br><span class="text8">джин на фруктах и травах, тоник,
+                                надежда</span> </div>
+                        <div class="text7">Лето в столице <br> <span class="text8">цитрусовый вермут, тоник, апельс.
+                                парфюм</span></div>
+                        <div class="text7">Итальянский завтрак <br> <span class="text8">ликёр бузины, просекко,
+                                содовая</span></div>
+                    </div>
+                </div>
+
+                <div class="grid-drink-number2">
+                    <div>600</div>
+                    <div class="number00">000</div>
+                    <div>600</div>
+                    <div class="number00">000</div>
+                    <div>600</div>
+
+                </div>
+
+                <div class="grid-drink pseudo-gap"></div>
+
+
+                <div class="grid-column1">
+                    <div class="text0">Coffee</div>
+                    <div class="grid-column2">
+                        <div class="text7">Кир Рояль <br><span class="text8">черносмородиновый ликёр, просекко</span>
+                        </div>
+                        <div class="text7">Негрони <br> <span class="text8">джин, красный вермут, биттер</span></div>
+                        <div class="text7">Крёстный отец <br> <span class="text8">виски, миндальный ликёр, апельс.
+                                парфюм</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-drink-number2">
+                    <div>600</div>
+                    <div class="number00">000</div>
+                    <div>600</div>
+                    <div class="number00">000</div>
+                    <div>600</div>
+                </div>
             </div>
         </div>
 
-        <div class="grid-container-drinks">
-            <div class="grid-column1">
-                <div class="text5">Drinks</div>
-                <div class="text6">Напитки с молоком </div>
-                <div class="grid-column2">
-                    <div class="text7">Матча латте </div>
-                    <div class="text7">Какао </div>
-                    <div class="text7">Бин-ту-бар </div>
-                    <div class="text7">- шоколад шот </div>
-                    <div class="text7">- шот с молоком </div>
-                    <div class="text7">Альтернативное молоко </div>
+        <div class="basement-container">
+            <img src="images/basement/basement.png" class="basement">
+            <div class="grid-container-basement">
+                <div class="grid-column"></div>
+                <div class="grid-column">
+                    <div class="text7"> Как нас найти? </div>
+                    <img src="images/basement/map.png" class="map">
+                    <a href="https://maps.app.goo.gl/qTDo765w7FSS3uwm9" class="text-link"> Flat community </a>
+                    <div class="lebl"> <img src="images/basement/lebl.svg" class="lebl"> </div>
+                    <div class="text69">©Elena Teplova, 2024</div>
                 </div>
-                <div class="text6">Чай</div>
-                <div class="grid-column2">
-                    <div class="text7">Мин Хун (Китай) </div>
-                    <div class="text7">Лунцзинь Нун Сьянь (Китай) </div>
-                    <div class="text7">Гречишный чай </div>
-                </div>
-            </div>
-
-            <div class="grid-drink-number">
-                <div>380</div>
-                <div>380</div>
-                <div class="number0">000</div>
-                <div>300</div>
-                <div>360</div>
-                <div>+50</div>
-
-                <div class="text00">280</div>
-                <div>400</div>
-                <div>400</div>
-                <div>400</div>
-            </div>
-
-            <div class="grid-drink pseudo-gap"></div>
-
-
-            <div class="grid-column1">
-                <div class="text0">Coffee</div>
-                <div class="text6">Холодные напитки </div>
-                <div class="grid-column2">
-                    <div class="text7">Лимонад малина-лемонграсс </div>
-                    <div class="text7">Лимонад маракуйя-огурец </div>
-                    <div class="text7">Холодный ройбуш </div>
-                    <div class="text7">Холодный матча латте</div>
-                    <div class="text7">Матча тоник с лавандой</div>
-                    <div class="text7">Комбуча</div>
-                    <div class="text7">Клаб мате</div>
-                </div>
-            </div>
-
-            <div class="grid-drink-number">
-                <div>330</div>
-                <div>330</div>
-                <div>400</div>
-                <div>380</div>
-                <div>420</div>
-                <div>420</div>
-                <div>420</div>
-            </div>
-
-        </div>
-
-        <div class="grid-container-drinks">
-            <div class="grid-column1">
-                <div class="text5">Spirits</div>
-                <div class="grid-column2">
-                    <div class="text7">Bulleit Bourbon </div>
-                    <div class="text7">Nikka Coffey Grain Whiskey </div>
-                    <div class="text7">Rum Minoki Mizunara Cask </div>
-                    <div class="text7">Courvoisier VSOP</div>
-                    <div class="text7">Calvados Chateau du Breiu </div>
-                </div>
-            </div>
-
-            <div class="grid-drink-number2">
-                <div>600</div>
-                <div>1000</div>
-                <div>1000</div>
-                <div>850</div>
-                <div>1000</div>
-            </div>
-
-            <div class="grid-drink pseudo-gap"></div>
-
-
-            <div class="grid-column1">
-                <div class="text0">Coffee</div>
-                <div class="grid-column2">
-                    <div class="text7">Roku Gin</div>
-                    <div class="text7">Amaro Montenegro </div>
-                    <div class="text7">Tatratea Original </div>
-                    <div class="text7">Vodka Grey Goose </div>
-                </div>
-            </div>
-
-            <div class="grid-drink-number2">
-                <div>650</div>
-                <div>400</div>
-                <div>400</div>
-                <div>900</div>
-            </div>
-        </div>
-
-        <div class="grid-container-drinks">
-            <div class="grid-column1">
-                <div class="text5">Cocktails</div>
-                <div class="grid-column2">
-                    <div class="text7">Ветер перемен <br><span class="text8">джин на фруктах и травах, тоник,
-                            надежда</span> </div>
-                    <div class="text7">Лето в столице <br> <span class="text8">цитрусовый вермут, тоник, апельс.
-                            парфюм</span></div>
-                    <div class="text7">Итальянский завтрак <br> <span class="text8">ликёр бузины, просекко,
-                            содовая</span></div>
-                </div>
-            </div>
-
-            <div class="grid-drink-number2">
-                <div>600</div>
-                <div class="number00">000</div>
-                <div>600</div>
-                <div class="number00">000</div>
-                <div>600</div>
-
-            </div>
-
-            <div class="grid-drink pseudo-gap"></div>
-
-
-            <div class="grid-column1">
-                <div class="text0">Coffee</div>
-                <div class="grid-column2">
-                    <div class="text7">Кир Рояль <br><span class="text8">черносмородиновый ликёр, просекко</span> </div>
-                    <div class="text7">Негрони <br> <span class="text8">джин, красный вермут, биттер</span></div>
-                    <div class="text7">Крёстный отец <br> <span class="text8">виски, миндальный ликёр, апельс.
-                            парфюм</span>
+                <div class="grid-column-align-left">
+                    <div class="text10"> Контакты </div>
+                    <div class="container-contacts">
+                        <a href="https://www.instagram.com/flat.beograd?igsh=bGN0cTN0YzVzZ2Uw"> <img
+                                src="images/basement/instagram.png">
+                        </a>
+                        <a href="https://www.instagram.com/flat.beograd?igsh=bGN0cTN0YzVzZ2Uw" class="text-link2">
+                            flat.beograd </a>
+                    </div>
+                    <div class="container-contacts">
+                        <a href="https://wolt.com/sr/srb/belgrade/restaurant/flat-community"> <img
+                                src="images/basement/wolt.png"> </a>
+                        <a href="https://wolt.com/sr/srb/belgrade/restaurant/flat-community" class="text-link2">
+                            Devilery
+                            10:30-21:00</a>
                     </div>
                 </div>
             </div>
-
-            <div class="grid-drink-number2">
-                <div>600</div>
-                <div class="number00">000</div>
-                <div>600</div>
-                <div class="number00">000</div>
-                <div>600</div>
-            </div>
         </div>
     </div>
-
-    <div class="basement-container">
-        <img src="images/basement/basement.png" class="basement">
-        <div class="grid-container-basement">
-            <div class="grid-column"></div>
-            <div class="grid-column">
-                <div class="text7"> Как нас найти? </div>
-                <img src="images/basement/map.png" class="map">
-                <a href="https://maps.app.goo.gl/qTDo765w7FSS3uwm9" class="text-link"> Flat community </a>
-                <div class="lebl"> <img src="images/basement/lebl.svg" class="lebl"> </div>
-                <div class="text69">©Elena Teplova, 2024</div>
-            </div>
-            <div class="grid-column-align-left">
-                <div class="text10"> Контакты </div>
-                <div class="container-contacts">
-                    <a href="https://www.instagram.com/flat.beograd?igsh=bGN0cTN0YzVzZ2Uw"> <img
-                            src="images/basement/instagram.png">
-                    </a>
-                    <a href="https://www.instagram.com/flat.beograd?igsh=bGN0cTN0YzVzZ2Uw" class="text-link2">
-                        flat.beograd </a>
-                </div>
-                <div class="container-contacts">
-                    <a href="https://wolt.com/sr/srb/belgrade/restaurant/flat-community"> <img
-                            src="images/basement/wolt.png"> </a>
-                    <a href="https://wolt.com/sr/srb/belgrade/restaurant/flat-community" class="text-link2">
-                        Devilery
-                        10:30-21:00</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </body>
 
 </html>
