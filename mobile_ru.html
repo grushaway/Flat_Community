@@ -12,7 +12,7 @@
     <div id="content-table">
         <div class="spacer" id="first-container">
             <div class="language-switcher">
-                <div class="current-language" id="current-language"><img src="images/sr.png"></div>
+                <div class="current-language" id="current-language"><img src="images/rus.svg"></div>
                 <div class="arrow">
                     <span class="arrow-top"></span>
                     <span class="arrow-bottom"></span>
@@ -23,22 +23,6 @@
                     <a href="mobile_sr.html" onclick="switchLanguage('sr')"><img src="images/sr.svg"></a>
                 </div>
             </div>
-
-            <script>
-                function switchLanguage(lang) {
-                    const texts = document.querySelectorAll('.text-lang');
-                    texts.forEach(text => {
-                        if (text.id.includes(lang)) {
-                            text.style.display = 'block';
-                        } else {
-                            text.style.display = 'none';
-                        }
-                    });
-
-                    // Меняем текст в текущем языке
-                    document.getElementById('current-language').textContent = lang.toUpperCase();
-                }
-            </script>
 
             <img src="images/flat1.png" class="flatimages">
         </div>
@@ -53,7 +37,6 @@
                 <a href="#Desserts">Desserts</a>
                 <a href="#Drinks">Drinks</a>
             </div>
-
 
             <div class="background-text">
                 <p class="text1" id="Main">Cold dishes</p>
@@ -237,9 +220,7 @@
                     <div class="text7">Бамбл </div>
                     <div class="text7">Колдбрю </div>
                 </div>
-
             </div>
-
 
             <div class="grid-drink-number">
                 <div>280</div>
@@ -333,7 +314,6 @@
                 <div>420</div>
                 <div>420</div>
             </div>
-
         </div>
 
         <div class="grid-container-drinks">
@@ -395,8 +375,6 @@
                 <div>600</div>
             </div>
 
-
-
             <div class="grid-column1">
                 <div class="text0">Coffee</div>
                 <div class="grid-column2">
@@ -447,23 +425,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        window.addEventListener('scroll', function () {
-            var header = document.getElementById('navbar');
-            var spacer = document.querySelector('.spacer');
-            var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
-
-            console.log('Page Y Offset:', window.pageYOffset);
-            console.log('Spacer Bottom:', spacerBottom);
-
-            if (window.pageYOffset > spacerBottom - 20) {
-                header.classList.add('fixed');
-            } else {
-                header.classList.remove('fixed');
-            }
-        });
-    </script>
 </body>
 
 </html>
