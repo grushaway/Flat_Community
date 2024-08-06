@@ -1,12 +1,8 @@
 function updateListeners() {
-  var backToTopButton = document.getElementById("back-to-top");
-  var header = document.getElementById("header");
-
   window.addEventListener("scroll", function () {
-    console.log("scrolling");
+    var backToTopButton = document.getElementById("back-to-top");
     const firstContainer = document.getElementById("first-container");
     const firstContainerBottom = firstContainer.getBoundingClientRect().bottom;
-
     var header = document.getElementById("navbar");
     var spacer = document.querySelector(".spacer");
     var spacerBottom = spacer.offsetTop + spacer.offsetHeight;
@@ -24,6 +20,7 @@ function updateListeners() {
     }
   });
 
+  var backToTopButton = document.getElementById("back-to-top");
   backToTopButton.addEventListener("click", function () {
     window.scrollTo({
       top: 0,
@@ -33,7 +30,6 @@ function updateListeners() {
 }
 
 function loadContent() {
-  updateListeners();
   const themeStylesheet = document.getElementById("theme-stylesheet");
   const content = document.getElementById("content-table");
   const userAgent = navigator.userAgent.toLowerCase();
@@ -41,16 +37,17 @@ function loadContent() {
     /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(
       userAgent
     );
+  const lang = document.documentElement.lang;
 
-  if (isMobile) {
-    themeStylesheet.setAttribute("href", "mobile.css");
-    fetch("mobile.html")
-      .then((response) => response.text())
-      .then((data) => {
-        content.innerHTML = data;
-      });
-    return;
-  }
+  // if (isMobile) {
+  //   themeStylesheet.setAttribute("href", "mobile.css");
+  //   fetch("mobile.html")
+  //     .then((response) => response.text())
+  //     .then((data) => {
+  //       content.innerHTML = data;
+  //     });
+  //   return;
+  // }
 
   var fileName;
   switch (lang) {
@@ -74,6 +71,9 @@ function loadContent() {
     .then((response) => response.text())
     .then((data) => {
       content.innerHTML = data;
+    })
+    .then(() => {
+      updateListeners();
     });
 }
 
