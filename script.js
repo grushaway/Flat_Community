@@ -42,15 +42,15 @@ function loadContent() {
       userAgent
     );
 
-  // if (isMobile) {
-  //   themeStylesheet.setAttribute("href", "mobile.css");
-  //   fetch("mobile.html")
-  //     .then((response) => response.text())
-  //     .then((data) => {
-  //       content.innerHTML = data;
-  //     });
-  //   return;
-  // }
+  if (isMobile) {
+    themeStylesheet.setAttribute("href", "mobile.css");
+    fetch("mobile.html")
+      .then((response) => response.text())
+      .then((data) => {
+        content.innerHTML = data;
+      });
+    return;
+  }
 
   var fileName;
   switch (lang) {
