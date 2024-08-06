@@ -201,7 +201,7 @@ body {
 }
 
 .header {
-  width: 430px;
+  width: 100%;
   top: 30px;
   left: 0;
   height: 60px;
@@ -217,7 +217,7 @@ body {
 }
 
 #navbar {
-  width: 430px;
+  width: 100%;
 }
 .fixed {
   position: fixed;
@@ -283,7 +283,7 @@ body {
   display: flex;
   font-family: "edit";
   font-size: 50px;
-  color: rgba(220, 62, 22, 0.4);
+  color: rgba(220, 62, 22, );
   justify-content: center;
   z-index: 2;
   position: relative;
@@ -361,7 +361,7 @@ body {
   display: flex;
   font-family: "edit";
   font-size: 50px;
-  color: rgb(220, 62, 22, 0.4);
+  color: rgb(220, 62, 22, 1);
   justify-content: center;
   padding-top: 10px;
 }
