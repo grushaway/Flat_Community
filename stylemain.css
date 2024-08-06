@@ -420,7 +420,6 @@ body,
 .grid-drink-text,
 .text6,
 .text-link,
-.text-link2,
 .text69,
 .text-contact {
   color: rgb(211, 211, 211);
@@ -530,14 +529,15 @@ body,
 }
 
 .grid-column-align-left {
+  padding-top: 50px ;
   display: grid;
   justify-content: left;
-  row-gap: 20px;
+  row-gap: 30px;
 }
 
 .text10 {
-  color: rgba(211, 211, 211);
-  font-family: "neuem";
+  color:  rgba(211, 211, 211);
+  font-family: "neue-m";
   font-size: 16px;
   z-index: 1;
   text-align: left;
@@ -551,52 +551,8 @@ body,
 
 .container-contacts {
   display: flex;
-  align-items: center;
-}
-@media screen and (max-width: 1200px) {
-  .language-switcher {
-    margin-left: 950px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .language-switcher {
-    margin-left: 750px;
-  }
-}
-
-.container-contacts img {
-  @media screen and (max-width: 768px) {
-    .language-switcher {
-      margin-left: 550px;
-    }
-  }
-
-  margin-right: 10px;
-  @media screen and (max-width: 576px) {
-    .language-switcher {
-      margin-left: 350px;
-    }
-  }
-
-  width: 20px;
-  @media screen and (max-width: 480px) {
-    .language-switcher {
-      margin-left: 250px;
-    }
-  }
-
-  height: auto;
-  @media screen and (max-width: 375px) {
-    .language-switcher {
-      margin-left: 200px;
-    }
-  }
-}
-@media screen and (max-width: 320px) {
-  .language-switcher {
-    margin-left: 150px;
-  }
+  align-items: stretch;
+  gap: 10px;
 }
 
 .text-link {
@@ -609,6 +565,7 @@ body,
   display: flex;
   justify-content: center;
   text-decoration: none;
+  color:  rgba(211, 211, 211);
 }
 
 .text-link:hover {
@@ -619,6 +576,7 @@ body,
   font-family: "neuem";
   z-index: 1;
   text-decoration: none;
+  color:  rgba(211, 211, 211);
 }
 
 .text-link2:hover {
@@ -627,7 +585,6 @@ body,
 
 .text-contact {
   font-family: "edit";
-  font-size: 18px;
   position: absolute;
   margin: 150px;
   left: 50%;
