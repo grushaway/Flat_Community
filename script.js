@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       behavior: "smooth",
     });
   });
+
   function loadContent() {
     const themeStylesheet = document.getElementById("theme-stylesheet");
     const content = document.getElementById("content-table");
@@ -66,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
+    
+    loadContent();
 
     window.addEventListener("resize", loadContent);
     window.addEventListener("load", loadContent);
