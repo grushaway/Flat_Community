@@ -25,7 +25,7 @@
 
 body {
   margin: 0;
-  width: 380px;
+  width: 100%;
 }
 
 .language-switcher {
@@ -283,7 +283,7 @@ body {
   display: flex;
   font-family: "edit";
   font-size: 50px;
-  color: rgba(220, 62, 22, );
+  color: rgba(220, 62, 22);
   justify-content: center;
   z-index: 2;
   position: relative;
