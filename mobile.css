@@ -32,7 +32,7 @@ body {
   position: absolute;
   display: flex;
   align-items: start;
-  margin-left: 320px;
+  left: 20px;
   z-index: 10;
   gap: 10px;
   align-content: flex-start;
@@ -141,17 +141,21 @@ body {
   max-width: 230px;
   align-items: center;
   justify-content: center;
-  margin-top: 25px;
-  margin-left: 102px;
   position: absolute;
+  top: 70px;
+  left: 51%;
+  transform: translate(-50%, -50%);
 }
 
 .spacer {
   background: url("images/mobile/back-mob.png");
-  margin: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: black;
+    margin: 0;
   padding: 0;
-  width: 430px;
-  height: 300px;
+  width: 100%
+  height: 365px;
 }
 
 .background-main {
@@ -164,7 +168,7 @@ body {
   display: none; /* Скрыть кнопку по умолчанию */
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 40px;
   width: 40px;
   height: 40px;
   background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
@@ -192,19 +196,20 @@ body {
 
 .fixed {
   position: fixed;
-  top: 0;
+  top: 0px;
   width: 100%;
 }
 
 .spacer {
-  height: 365px; /* Высота для демонстрации прокрутки */
+  width: 100%;
+  height: 365px;
 }
 
 .header {
-  width: 100%;
   top: 30px;
   left: 0;
-  height: 60px;
+  width: 100%;
+  height: 70px;
   background-color: hsla(0, 0%, 0%, 0.86);
   color: white;
   display: flex;
@@ -219,10 +224,10 @@ body {
 #navbar {
   width: 100%;
 }
-.fixed {
+.header.fixed {
   position: fixed;
   top: 0px;
-  height: 40px;
+  height: 50px;
 }
 
 .header a {
@@ -240,7 +245,7 @@ body {
   display: flex;
   font-family: "edit";
   font-size: 60px;
-  color: rgb(220, 62, 22, 0.4);
+  color: rgba(186, 35, 14, 1);
   justify-content: center;
   position: relative;
   margin-top: -40px;
@@ -283,7 +288,7 @@ body {
   display: flex;
   font-family: "edit";
   font-size: 50px;
-  color: rgba(220, 62, 22);
+  color: rgba(186, 35, 14, 1);
   justify-content: center;
   z-index: 2;
   position: relative;
@@ -361,7 +366,7 @@ body {
   display: flex;
   font-family: "edit";
   font-size: 50px;
-  color: rgb(220, 62, 22, 1);
+  color: rgba(186, 35, 14, 1);
   justify-content: center;
   padding-top: 10px;
 }
@@ -401,7 +406,7 @@ body {
 .text5 {
   font-family: "edit";
   font-size: 24px;
-  color: rgba(220, 62, 22, 1);
+  color: rgba(186, 35, 14, 1);
 }
 
 .text6 {
@@ -495,7 +500,7 @@ body {
   justify-content: center;
   row-gap: 280px;
   position: relative;
-  padding-top: 110px;
+  padding-top: 170px;
   z-index: 10;
   margin: auto;
 }
@@ -512,6 +517,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width:100%;
 }
 
 .grid-column {

@@ -240,7 +240,7 @@ body,
   display: flex;
   font-family: "edit";
   font-size: 100px;
-  color: rgb(220, 62, 22, 1);
+  color: rgba(186, 35, 14, 1);
   justify-content: center;
   margin-top: -50px;
 }
@@ -282,7 +282,7 @@ body,
   display: flex;
   font-family: "edit";
   font-size: 100px;
-  color: rgba(220, 62, 22, 1);
+  color: rgba(186, 35, 14, 1);
   justify-content: center;
   z-index: 2;
   position: relative;
@@ -367,7 +367,7 @@ body,
   display: flex;
   font-family: "edit";
   font-size: 100px;
-  color: rgb(220, 62, 22, 1);
+  color: rgba(186, 35, 14, 1);
   justify-content: center;
   margin-bottom: 30px;
 }
@@ -407,7 +407,7 @@ body,
 }
 
 .text5 {
-  color: rgba(220, 62, 22, 1);
+  color: rgba(186, 35, 14, 1);
 }
 
 .text6 {
