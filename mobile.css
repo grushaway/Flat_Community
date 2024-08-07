@@ -497,13 +497,13 @@ body {
 
 .grid-container-basement {
   display: grid;
-  grid-template-columns: 200px;
+  grid-template-columns: 220px;
   align-items: center;
   text-align: center;
   justify-content: center;
   row-gap: 220px;
   position: relative;
-  padding-top: 110px;
+  padding-top: 140px;
   z-index: 10;
   margin: auto;
 }
@@ -521,14 +521,13 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width:100%;
-  margin: 0;
+  margin-top: 0;
 }
 
 .grid-column {
   display: grid;
   justify-content: center;
   row-gap: 20px;
-  justify-items: center
   /* align-items: center; */
 }
 
@@ -545,6 +544,7 @@ body {
   font-size: 20px;
   z-index: 1;
   text-align: left;
+  padding: 0 15px;
 }
 
 .map {
@@ -559,17 +559,18 @@ body {
 
 .container-contacts {
   display: flex;
-  align-items: center;
+  row-gap: 10px;
+  align-items: flex-start
 }
 
 .container-contacts a {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "neue-m";
 }
 
 .container-contacts img {
   margin-right: 10px;
-  width: 20px;
+  width: 30px;
   height: auto;
 }
 
@@ -584,7 +585,7 @@ body {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .text-link:hover {
