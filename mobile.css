@@ -248,7 +248,8 @@ body {
   color: rgba(186, 35, 14, 1);
   justify-content: center;
   position: relative;
-  margin-top: -40px;
+  margin-top: -20px;
+  z-index: 1000;
 }
 
 .text1 {
