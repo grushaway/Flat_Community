@@ -445,7 +445,7 @@ body {
   font-size: 16px;
 }
 
-.grid-drink-number2 {
+.grid-drink-number2, .grid-drink-number22 {
   display: grid;
   row-gap: 10px;
   color: rgba(211, 211, 211);
@@ -453,6 +453,10 @@ body {
   font-family: "neuem";
   margin-top: 48px;
   font-size: 16px;
+}
+
+.grid-drink-number22 {
+  margin-top: 0;
 }
 
 .number0 {
